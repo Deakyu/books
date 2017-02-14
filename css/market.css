@@ -1,5 +1,7 @@
 .main-content {
-  margin-top:5%;
+  margin-top: 7%;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 2%;
 }
 
 .left-menu {
@@ -27,5 +29,9 @@
 @media  (max-width: 768px){
   .left-menue {
     display: none;
+  }
+
+  .main-content{
+    margin-top: 20%;
   }
 }
