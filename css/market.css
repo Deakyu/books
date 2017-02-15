@@ -1,5 +1,6 @@
 .main-content {
   margin-top: 7%;
+  margin-bottom: 7%;
   background-color: rgba(0, 0, 0, 0.1);
   padding: 2%;
 }
@@ -24,6 +25,10 @@
   display: inline-block;
   width: 70%;
   margin:0;
+}
+
+.hidden-author-field{
+  display: none;
 }
 
 @media  (max-width: 768px){

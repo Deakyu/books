@@ -36,7 +36,16 @@
         <div class="form-group">
           <label for="author" class="col-sm-2 control-label">Author</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="author" placeholder="Authors' Names">
+            <input type="text" class="form-control" id="author1" placeholder="Authors' Name">
+            <input type="text" class="form-control hide-auth hidden-author-field" id="author2" placeholder="Authors' Name">
+            <input type="text" class="form-control hide-auth hidden-author-field" id="author3" placeholder="Authors' Name">
+            <input type="text" class="form-control hide-auth hidden-author-field" id="author4" placeholder="Authors' Name">
+            <input type="text" class="form-control hide-auth hidden-author-field" id="author5" placeholder="Authors' Name">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" id="more_author"> More Than One Author
+              </label>
+            </div>
           </div>
         </div>
         <div class="form-group">
