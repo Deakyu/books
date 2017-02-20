@@ -45,7 +45,7 @@
     public static function CreateAuthorMultiple($authors) {
       $conn = DB::CreateConnection();
       $latestBookId = DB::GetLatestBookId();
-      $sql->close();
+      $conn->close();
       for ($i=0; $i < count($authors); $i++) {
         DB::CreateAuthor($i, $latestBookId);
       }
