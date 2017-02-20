@@ -21,8 +21,13 @@
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default nav-ddb">Submit</button>
       </form>
+      <ul class="nav navbar-nav navbar-right">
+       <li class="before-login"><a href="/books/authentication/login.php">Login</a></li>
+       <li class="before-login"><a href="#">Signup</a></li>
+       <li class="after-login"><a href="#">Logout</a></li>
+     </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

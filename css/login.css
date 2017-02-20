@@ -1,0 +1,42 @@
+.login-form {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(24, 168, 159, 0.3);
+}
+
+.login-form label {
+  display: block;
+}
+
+.login-form .form-group, .login-form input {
+  text-align: center;
+}
+
+.login-button {
+  display: block;
+  width: 100%;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form ul li a,
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form input {
+  text-align: center;
+}
+
+.nav-ddb {
+  background-color: rgba(24, 168, 159, 0.9);
+  color: white;
+  border: none;
+}
+
+.nav-ddb:hover {
+  background-color: rgba(24, 168, 159, 0.5);
+  color: white;
+  border:none;
+}
+
+@media (max-width: 768px) {
+  .login-form {
+    width: 100%;
+  }
+}
