@@ -1,7 +1,24 @@
 <?php
  class DB
  {
+   public static function isUsernameExist($username) {
+     $flag = false;
+     $conn = DB::CreateConnection();
+    //  TODO
+     $sql = $conn->prepare('SELECT username FROM User WHERE username=?');
+     $sql->bind_param("s", $username);
+     $sql->execute();
+     $sql->bind_result($result);
+     $sql->fetch();
+
+     if($username == $result) {
+       $flag = true;
+     }
+     return $flag;
+   }
+
    public static function CreateUser($username, $password, $email) {
+     //  TODO Check if the username already exists
      $conn = DB::CreateConnection();
      $sql = $conn->prepare('INSERT INTO User (username, pw, email) VALUES (?, ?, ?)');
      $sql->bind_param("sss", $username, $password, $email);

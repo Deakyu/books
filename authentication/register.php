@@ -8,17 +8,24 @@ if(isset($_POST['submit'])) {
     $pwConfirm = $_POST['password-confirm'];
     $email = $_POST['email'];
 
+    if(DB::isUsernameExist($username)) {
+      $GLOBALS['isUsernameExist'] = true;
+    } else {
+      $GLOBALS['isUsernameExist'] = false;
+    }
+
     if($password !== $pwConfirm) {
-      $GLOBALS['isConfirmed'] = false;
+        $GLOBALS['isConfirmed'] = false;
     }
     else {
-      $GLOBALS['isConfirmed'] = true;
-      $hashed_password = password_hash($password, PASSWORD_BCRYPT);
-      DB::CreateUser($username, $hashed_password, $email);
-      // TODO redirect to proper location after building pages
-      header("Location: login.php");
-
-    }
+        if(!$GLOBALS['isUsernameExist']) {
+          $GLOBALS['isConfirmed'] = true;
+          $hashed_password = password_hash($password, PASSWORD_BCRYPT);
+          DB::CreateUser($username, $hashed_password, $email);
+          // TODO redirect to proper location after building pages
+          header("Location: login.php");
+        }
+      }
 }
 
 ?>
@@ -27,6 +34,15 @@ if(isset($_POST['submit'])) {
     <div class="form-group">
       <label for="username">Username</label>
       <input type="text" class="form-control" name="username" placeholder="Your Fredonia e-service username" required>
+      <p class="username-status">
+        <?php
+          if(isset($GLOBALS['isUsernameExist'])) {
+            if($GLOBALS['isUsernameExist']) {
+              echo "That Username Already Exists! Please use another username";
+            }
+          }
+         ?>
+      </p>
     </div>
     <div class="form-group">
       <label for="password">Password</label>
@@ -38,9 +54,7 @@ if(isset($_POST['submit'])) {
       <p class="pw-status">
         <?php
         if(isset($GLOBALS['isConfirmed'])) {
-          if($GLOBALS['isConfirmed']) {
-            echo "Confirmed!";
-          } else {
+          if(!$GLOBALS['isConfirmed']) {
             echo "Passwords Do Not Match! Please try again";
           }
         }

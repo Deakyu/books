@@ -8,11 +8,11 @@ if(isset($_POST['submit'])) {
   <form action="login.php" method="post" accept-charset="utf-8">
     <div class="form-group">
       <label for="username">Username</label>
-      <input type="text" class="form-control" id="username" placeholder="Your Fredonia e-service username">
+      <input type="text" class="form-control" name="username" placeholder="Fredonia eService Username">
     </div>
     <div class="form-group">
       <label for="password">Password</label>
-      <input type="password" class="form-control" id="password" minlength="8">
+      <input type="password" class="form-control" name="password" minlength="8">
     </div>
     <input type="submit" name="submit" class="btn btn-success login-button" value="Login"></button>
   </form>
