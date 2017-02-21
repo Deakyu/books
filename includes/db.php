@@ -1,10 +1,26 @@
 <?php
  class DB
  {
+   public static function IsAuthenticated($username, $password) {
+     $flag = false;
+     $hashed_password = password_hash($password, PASSWORD_BCRYPT);
+     $conn = DB::CreateConnection();
+     $sql = $conn->prepare("SELECT username, pw FROM User WHERE username=?");
+     $sql->bind_param("s", $username);
+     $sql->execute();
+     $sql->bind_result($returnedUsername, $returnedPassword);
+     $sql->fetch();
+     if(!is_null($returnedUsername) && !is_null($returnedPassword)){
+       if($returnedUsername == $username && password_verify($password, $returnedPassword)) {
+         return true;
+       }
+     }
+     return false;
+   }
+
    public static function isUsernameExist($username) {
      $flag = false;
      $conn = DB::CreateConnection();
-    //  TODO
      $sql = $conn->prepare('SELECT username FROM User WHERE username=?');
      $sql->bind_param("s", $username);
      $sql->execute();

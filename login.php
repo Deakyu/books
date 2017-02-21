@@ -1,7 +1,11 @@
 <?php include "C:/xampp/htdocs/Books/includes/top.php" ?>
+<?php include "C:/xampp/htdocs/Books/includes/db.php" ?>
 <?php
 if(isset($_POST['submit'])) {
-    echo "<script>alert('submitted!')</script>";
+  if(DB::IsAuthenticated($_POST['username'], $_POST['password'])) {
+    // TODO appropriate redirection needed
+    header("Location: register_book.php");
+  }
 }
 ?>
 <div class="container main-content login-form">
