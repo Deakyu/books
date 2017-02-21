@@ -1,18 +1,22 @@
-.login-form {
+.login-form, .register-form {
   width: 40%;
   margin-left: auto;
   margin-right: auto;
   background-color: rgba(24, 168, 159, 0.3);
 }
 
-.login-form label {
+.register-form {
+  background-color: rgba(24, 168, 159, 0.5);
+}
+
+.login-form label , .register-form label{
   display: block;
   color: white;
   font-weight: bold;
   font-size: 1.8em;
 }
 
-.login-form .form-group, .login-form input {
+.login-form .form-group, .login-form input, .register-form .form-group, .register-form input{
   text-align: center;
 }
 
@@ -42,6 +46,9 @@
 
 @media (max-width: 768px) {
   .login-form {
+    width: 100%;
+  }
+  .register-form {
     width: 100%;
   }
 }

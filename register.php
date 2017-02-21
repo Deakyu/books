@@ -1,5 +1,5 @@
-<?php include "../includes/top.php" ?>
-<?php include "../db.php" ?>
+<?php include "C:/xampp/htdocs/Books/includes/top.php" ?>
+<?php include "C:/xampp/htdocs/Books/includes/db.php" ?>
 
 <?php
 if(isset($_POST['submit'])) {
@@ -29,7 +29,7 @@ if(isset($_POST['submit'])) {
 }
 
 ?>
-<div class="container main-content login-form">
+<div class="container main-content register-form">
   <form action="register.php" method="post" accept-charset="utf-8">
     <div class="form-group">
       <label for="username">Username</label>

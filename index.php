@@ -1,5 +1,5 @@
-<?php include "includes/top.php" ?>
+<?php include "C:/xampp/htdocs/Books/includes/top.php" ?>
 
 
 
-<?php include "includes/footer.php" ?>
+<?php include "C:/xampp/htdocs/Books/includes/footer.php" ?>

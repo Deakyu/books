@@ -1,4 +1,4 @@
-<?php include "../includes/top.php" ?>
+<?php include "C:/xampp/htdocs/Books/includes/top.php" ?>
 <?php
 if(isset($_POST['submit'])) {
     echo "<script>alert('submitted!')</script>";
@@ -17,4 +17,4 @@ if(isset($_POST['submit'])) {
     <input type="submit" name="submit" class="btn btn-success login-button" value="Login"></button>
   </form>
 </div>
-<?php include "../includes/bottom.php" ?>
+<?php include "C:/xampp/htdocs/Books/includes/bottom.php" ?>
