@@ -6,7 +6,7 @@
      $sql = $conn->prepare('INSERT INTO User (username, pw, email) VALUES (?, ?, ?)');
      $sql->bind_param("sss", $username, $password, $email);
      $sql->execute();
-     $sql->execute();
+     $sql->close();
    }
 
    public static function GetSubjects() {

@@ -25,7 +25,7 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
        <li class="before-login"><a href="/books/authentication/login.php">Login</a></li>
-       <li class="before-login"><a href="#">Signup</a></li>
+       <li class="before-login"><a href="/books/authentication/register.php">Signup</a></li>
        <li class="after-login"><a href="#">Logout</a></li>
      </ul>
     </div><!-- /.navbar-collapse -->
