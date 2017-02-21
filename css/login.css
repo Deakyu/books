@@ -7,13 +7,18 @@
 
 .login-form label {
   display: block;
+  color: white;
+  font-weight: bold;
+  font-size: 1.8em;
 }
 
 .login-form .form-group, .login-form input {
   text-align: center;
 }
 
-.login-button {
+.login-button, .register-button {
+  margin-top: 5%;
+  margin-bottom: 1%;
   display: block;
   width: 100%;
 }

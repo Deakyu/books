@@ -12,7 +12,7 @@ if(isset($_POST['submit'])) {
     </div>
     <div class="form-group">
       <label for="password">Password</label>
-      <input type="password" class="form-control" id="password" placeholder="8 Characters or More" minlength="8">
+      <input type="password" class="form-control" id="password" minlength="8">
     </div>
     <input type="submit" name="submit" class="btn btn-success login-button" value="Login"></button>
   </form>

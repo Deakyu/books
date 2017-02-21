@@ -1,6 +1,13 @@
 <?php
  class DB
  {
+   public static function CreateUser($username, $password, $email) {
+     $conn = DB::CreateConnection();
+     $sql = $conn->prepare('INSERT INTO User (username, pw, email) VALUES (?, ?, ?)');
+     $sql->bind_param("sss", $username, $password, $email);
+     $sql->execute();
+     $sql->execute();
+   }
 
    public static function GetSubjects() {
      $conn = DB::CreateConnection();
