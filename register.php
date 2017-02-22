@@ -1,5 +1,5 @@
-<?php include "C:/xampp/htdocs/Books/includes/top.php" ?>
-<?php include "C:/xampp/htdocs/Books/includes/db.php" ?>
+<?php include "includes/top.php" ?>
+<?php include "includes/db.php" ?>
 
 <?php
 if(isset($_POST['submit'])) {
@@ -69,4 +69,4 @@ if(isset($_POST['submit'])) {
   </form>
 </div>
 
-<?php include "../includes/bottom.php" ?>
+<?php include "includes/bottom.php" ?>

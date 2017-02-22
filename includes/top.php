@@ -9,4 +9,4 @@
      <link rel="stylesheet" href="css/login.css" type="text/css">
   </head>
   <body>
-    <?php include "C:/xampp/htdocs/Books/includes/navbar.php"; ?>
+    <?php include "navbar.php"; ?>

@@ -1,5 +1,5 @@
-<?php include "C:/xampp/htdocs/Books/includes/top.php" ?>
-<?php include "C:/xampp/htdocs/Books/includes/db.php" ?>
+<?php include "includes/top.php" ?>
+<?php include "includes/db.php" ?>
 <?php
 if(isset($_POST['submit'])) {
   if(DB::IsAuthenticated($_POST['username'], $_POST['password'])) {
@@ -21,4 +21,4 @@ if(isset($_POST['submit'])) {
     <input type="submit" name="submit" class="btn btn-success login-button" value="Login"></button>
   </form>
 </div>
-<?php include "C:/xampp/htdocs/Books/includes/bottom.php" ?>
+<?php include "includes/bottom.php" ?>
