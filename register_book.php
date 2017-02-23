@@ -1,7 +1,7 @@
 <?php
     // register_book.php
-    include "C:/xampp/htdocs/Books/includes/db.php";
-    include "C:/xampp/htdocs/Books/includes/top.php";
+    include "includes/db.php";
+    include "includes/top.php";
  ?>
 
 <div class="container main-content">
